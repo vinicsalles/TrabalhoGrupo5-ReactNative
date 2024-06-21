@@ -1,41 +1,33 @@
-import React from 'react';
-import { View, Text, Image, ImageBackground, Alert } from 'react-native';
-import { styled } from './style';
-import { useNavigation } from '@react-navigation/native';
-import { ButtonComponent } from "../../Components/Button";
+import React, { useEffect, useState } from "react";
+import { View, ScrollView } from "react-native";
+import ProductCard from "../../Components/CardProduto";
+import axios from "axios";
+import styles from "./style";
 
+interface Product {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+}
 
-export function Home() {
+export const Home: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
 
-  const navigation = useNavigation();
-
-  const soonAlert = () => {
-      Alert.alert("null")
-    }
+  useEffect(() => {
+    axios
+      .get("https://6674cee475872d0e0a979434.mockapi.io/produtos")
+      .then((response) => setProducts(response.data))
+      .catch((error) => console.error(error));
+  }, []);
 
   return (
-    <View style={styled.container}>
-      <ImageBackground style={styled.background}>     
-      
-      <Text style={styled.welcome}>
-      Bem vindo</Text> 
-
-      <View style={styled.buttonsBox}>
-      <ButtonComponent
-            recebendoCor={121212}
-            recebendoTitle="button 1"
-            recebendoFuncao={soonAlert}
-          />
-        <ButtonComponent
-        recebendoCor={121212}
-            recebendoTitle="button 2"
-            recebendoFuncao={soonAlert}
-          />
+    <ScrollView>
+      <View style={styles.container}>
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </View>
-
-
-
-      </ImageBackground>
-    </View>
-  )
-}
+    </ScrollView>
+  );
+};
