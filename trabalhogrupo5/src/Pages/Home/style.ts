@@ -11,8 +11,7 @@ export const styled = StyleSheet.create({
   background: {
     height: '100%',
     width: '100%',
-    flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#FF7E04',
   },
 
   welcome: {
@@ -20,20 +19,6 @@ export const styled = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: '900'
-  },
-
-  shadows: {
-    fontSize: 23,
-    textAlign: 'center',
-    color: 'white',
-    fontWeight: '700'
-  },
-
-  demons: {
-    fontSize: 10,
-    textAlign: 'center',
-    color: 'white',
-    fontWeight: '300'
   },
 
   textBox: {

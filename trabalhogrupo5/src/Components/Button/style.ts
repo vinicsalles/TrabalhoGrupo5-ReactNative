@@ -3,33 +3,16 @@ import { StyleSheet } from "react-native";
 export const styled = StyleSheet.create({
   button: {
     marginTop: 20,
-    backgroundColor: "#b0b0b0",
-    width: 80,
+    width: '50%',
     alignItems: "center",
     alignContent: "center",
     justifyContent: "center",
-    borderRadius: 10,
+    borderRadius: 20,
     marginBottom: 100,
-    height: 80,
-  },
-  icon: {
-    width: "50%",
-    alignItems: "center",
-    alignContent: "center",
-    position: "absolute",
-    resizeMode: "contain",
+    height: 50,
   },
   title: {
-    padding: 2,
-    marginBottom: -60,
     fontSize: 20,
     color: "white",
-  },
-  gradiente: {
-    width: "100%",
-    height: 80,
-    position: "absolute",
-    borderRadius: 10,
-    opacity: 0.8,
   },
 });

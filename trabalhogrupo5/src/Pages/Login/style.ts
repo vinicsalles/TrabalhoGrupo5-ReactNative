@@ -11,6 +11,7 @@ export const styled = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: '#FF7E04',
   },
 
   title: {
@@ -21,8 +22,7 @@ export const styled = StyleSheet.create({
   },
 
   button: {
-    marginTop: 20,
-    backgroundColor: '#b0b0b0',
+    marginTop: 20,    
     width: 80,
     alignItems: 'center',
     alignContent: 'center',

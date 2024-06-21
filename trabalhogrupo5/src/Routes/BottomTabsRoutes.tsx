@@ -25,8 +25,7 @@ export function BottomTabsRoutes() {
               flexDirection: 'row',
               marginTop: 30,
             }}>
-              <Image style={styled.gradiente} source={Gradiente} alt="gradiente" />
-              <Text style={{ fontSize: 25, color:"#fff"}}>Burroughs AI</Text>
+              <Text style={{ fontSize: 25, color:"#121212"}}>Top bar</Text>
             </View>
           ),
           headerBackgroundContainerStyle: {
