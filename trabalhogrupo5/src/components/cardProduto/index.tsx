@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import styles from './style';
+import React from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import styles from "./style";
 
 interface Product {
   id: number;
@@ -28,10 +28,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <Text style={styles.title}>{product.title}</Text>
       <Text style={styles.price}>Preço: R$ {product.price.toFixed(2)}</Text>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, styles.buyButton]} onPress={handleBuyPress}>
+        <TouchableOpacity
+          style={[styles.button, styles.buyButton]}
+          onPress={handleBuyPress}
+        >
           <Text style={styles.buttonText}>Comprar</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, styles.cartButton]} onPress={handleCartPress}>
+        <TouchableOpacity
+          style={[styles.button, styles.cartButton]}
+          onPress={handleCartPress}
+        >
           <Text style={styles.buttonText}>Carrinho</Text>
         </TouchableOpacity>
       </View>
