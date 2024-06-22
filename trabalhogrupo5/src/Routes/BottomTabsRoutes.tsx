@@ -6,6 +6,7 @@ import { Text, View, Image } from 'react-native';
 import Icon from '@expo/vector-icons/Ionicons';
 import { styled } from "./style";
 import Gradiente from '../Assets/gradiente.png'
+import { Catalogo } from "../Pages/Catalogo";
 
 
 const Tab = createBottomTabNavigator();
@@ -57,6 +58,17 @@ export function BottomTabsRoutes() {
             <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>
               <Icon name="person" size={20} color={focused ? "#fff" : "#121212"} />
               <Text style={{ fontSize: 25, color: focused ? "#fff" : '#121212' }}>Profile</Text>
+            </View>
+          ),
+        }}
+      />
+      <Tab.Screen name='TabsCatalogo'
+        component={Catalogo}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View style={{ alignItems: 'center', justifyContent: 'center', marginTop: 10 }}>
+              <Icon name="person" size={20} color={focused ? "#fff" : "#121212"} />
+              <Text style={{ fontSize: 25, color: focused ? "#fff" : '#121212' }}>Catalogo</Text>
             </View>
           ),
         }}
