@@ -22,7 +22,7 @@ export const Catalogo: React.FC = () => {
   }, []);
 
   return (
-    <ScrollView>
+    <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

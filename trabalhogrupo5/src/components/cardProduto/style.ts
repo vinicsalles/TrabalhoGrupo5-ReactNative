@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: "#ffa500", // Laranja
     borderRadius: 8,
     padding: 16,
     margin: 8,
@@ -26,10 +26,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 8,
     textAlign: "center",
+    color: "#ffffff", // Branco
   },
   price: {
     fontSize: 16,
     marginBottom: 8,
+    color: "#ffffff", // Branco
   },
   buttonContainer: {
     flexDirection: "row",
@@ -46,11 +48,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   buyButton: {
-    backgroundColor: "#007bff",
+    backgroundColor: "#00264d", // Azul escuro
     marginRight: 8,
   },
   cartButton: {
-    backgroundColor: "#28a745",
+    backgroundColor: "#00264d", // Azul escuro
   },
   buttonText: {
     color: "#fff",
