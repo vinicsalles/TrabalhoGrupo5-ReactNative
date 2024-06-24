@@ -14,6 +14,10 @@ import { TextInputComponent } from "../../Components/TextInput";
 import { useNavigation } from "@react-navigation/native";
 import { ButtonComponent } from "../../Components/Button";
 import Gradiente from "../../Assets/gradiente.png";
+import Google from "../../Assets/icons8-google-logo-48.png";
+import Meta from "../../Assets/icons8-meta-48.png";
+import Apple from "../../Assets/icons8-mac-os-30.png";
+import { LineComponent } from "../../Components/line";
 
 export function Login() {
   const [username, setUsername] = useState<string>("");
@@ -29,6 +33,10 @@ export function Login() {
     setPassword(value);
   };
 
+  const skipLogin = () => {
+    navigation.navigate("StackTabsPages", { name: "Login" });
+  };
+
   const handleLogin = () => {
     if (username == "usuario" && password == "123456") {
       navigation.navigate("StackTabsPages", { name: "Login" });
@@ -41,11 +49,29 @@ export function Login() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground source={Gradiente} style={styled.background}>
         <View style={styled.container}>
-
-        <ButtonComponent
+          <ButtonComponent
             recebendoCor="white"
-            recebendoTitle="Login"
-            recebendoFuncao={handleLogin}
+            recebendoIcon={Google}
+            recebendoTitle="Continue com Google"
+            recebendoFuncao={skipLogin}
+          />
+
+          <ButtonComponent
+            recebendoCor="white"
+            recebendoIcon={Meta}
+            recebendoTitle="Continue com Meta"
+            recebendoFuncao={skipLogin}
+          />
+
+          <ButtonComponent
+            recebendoCor="white"
+            recebendoIcon={Apple}
+            recebendoTitle="Continue com Apple"
+            recebendoFuncao={skipLogin}
+          />
+
+          <LineComponent
+          recebendoTexto="OU"
           />
 
           <Image style={styled.logo} source={Logo} />
@@ -68,8 +94,11 @@ export function Login() {
           <ButtonComponent
             recebendoCor="#48C6FD"
             recebendoTitle="Login"
+            recebendoIcon={null}
             recebendoFuncao={handleLogin}
           />
+
+        <Text style={styled.forgot}>Não tem uma conta? Registre-se!</Text>
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>

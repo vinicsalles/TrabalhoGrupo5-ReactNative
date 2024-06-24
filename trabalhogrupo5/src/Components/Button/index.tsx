@@ -1,23 +1,30 @@
 import React from "react";
 import { TouchableOpacity, Text, Image } from "react-native";
-import { styled } from "./style"; 
+import { styled } from "./style";
 
 type PropsButton = {
   recebendoTitle: string;
-  recebendoCor: any;
+  recebendoCor: string;
+  recebendoIcon: any;
   recebendoFuncao: () => void;
 };
 
-export function ButtonComponent({recebendoTitle, recebendoCor, recebendoFuncao,}: PropsButton) {
-
+export function ButtonComponent({
+  recebendoTitle,
+  recebendoCor,
+  recebendoIcon,
+  recebendoFuncao,
+}: PropsButton) {
   return (
     <>
       <TouchableOpacity
-      style={[styled.button, { backgroundColor: recebendoCor }]}
-      onPress={recebendoFuncao}
-    >
-      <Text style={styled.title}>{recebendoTitle}</Text>
-    </TouchableOpacity>
+        style={[styled.button, { backgroundColor: recebendoCor }]}
+        onPress={recebendoFuncao}
+      >
+        <Image style={styled.icon} source={recebendoIcon} alt="icon" />
+
+        <Text style={styled.title}>{recebendoTitle}</Text>
+      </TouchableOpacity>
     </>
   );
 }
