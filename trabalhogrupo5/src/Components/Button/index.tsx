@@ -5,7 +5,8 @@ import { styled } from "./style";
 type PropsButton = {
   recebendoTitle: string;
   recebendoCor: string;
-  recebendoIcon: any;
+  corFonte: string;
+  recebendoIcon?: any;
   recebendoFuncao: () => void;
 };
 
@@ -13,6 +14,7 @@ export function ButtonComponent({
   recebendoTitle,
   recebendoCor,
   recebendoIcon,
+  corFonte,
   recebendoFuncao,
 }: PropsButton) {
   return (
@@ -22,8 +24,10 @@ export function ButtonComponent({
         onPress={recebendoFuncao}
       >
         <View style={styled.bContent}>
-        <Image style={styled.icon} source={recebendoIcon} alt="icon" />
-        <Text style={styled.title}>{recebendoTitle}</Text>
+        {recebendoIcon ? (
+          <Image style={styled.icon} source={recebendoIcon} alt="icon" />
+        ) : null}
+        <Text style={[styled.title, { color: corFonte }]}>{recebendoTitle}</Text>
         </View>
 
       </TouchableOpacity>

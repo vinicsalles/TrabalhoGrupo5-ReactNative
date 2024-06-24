@@ -68,7 +68,8 @@ export function Login() {
 <Text style={styled.forgot}>Esqueci a senha!</Text>
 
           <ButtonComponent
-            recebendoCor="grey"
+            corFonte="white"
+            recebendoCor="#003452"
             recebendoTitle="Login"
             recebendoIcon={null}
             recebendoFuncao={handleLogin}

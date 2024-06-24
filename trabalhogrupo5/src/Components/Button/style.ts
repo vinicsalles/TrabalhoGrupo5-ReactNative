@@ -1,8 +1,6 @@
 import { StyleSheet } from "react-native";
 export const styled = StyleSheet.create({
-  button: {
-    //marginBottom: -10,
-    
+  button: { 
     width: "80%",
     height: 50,
 
@@ -15,7 +13,6 @@ export const styled = StyleSheet.create({
 
   title: {
     fontSize: 18,
-    color: "black",
     fontWeight: 'bold',
   },
 
