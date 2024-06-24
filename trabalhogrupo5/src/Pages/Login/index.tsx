@@ -49,7 +49,6 @@ export function Login() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground source={Gradiente} style={styled.background}>
         <View style={styled.container}>
-
           <Image style={styled.logo} source={Logo} />
 
           <TextInputComponent
@@ -65,7 +64,7 @@ export function Login() {
             recebendoTipoDoInput={true}
           />
 
-<Text style={styled.forgot}>Esqueci a senha!</Text>
+          <Text style={styled.forgot}>Esqueci a senha!</Text>
 
           <ButtonComponent
             corFonte="white"
@@ -74,14 +73,11 @@ export function Login() {
             recebendoIcon={null}
             recebendoFuncao={handleLogin}
           />
-        
-        
 
-        <LineComponent
-          recebendoTexto="OU"
-          />
+          <LineComponent recebendoTexto="OU" />
 
-        <ButtonComponent
+          <ButtonComponent
+            corFonte=""
             recebendoCor="white"
             recebendoIcon={Google}
             recebendoTitle="Continue com Google"
@@ -89,6 +85,7 @@ export function Login() {
           />
 
           <ButtonComponent
+            corFonte=""
             recebendoCor="white"
             recebendoIcon={Meta}
             recebendoTitle="Continue com Meta"
@@ -96,13 +93,13 @@ export function Login() {
           />
 
           <ButtonComponent
+            corFonte=""
             recebendoCor="white"
             recebendoIcon={Apple}
             recebendoTitle="Continue com Apple"
             recebendoFuncao={skipLogin}
           />
           <Text style={styled.signup}>Não tem uma conta? Registre-se!</Text>
-          
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>
