@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   timer: {
-    fontSize: 48,
-    color: "#f24",
+    fontSize: 29,
+    color: "#FF7E04",
+    padding: 53,
   },
 });
