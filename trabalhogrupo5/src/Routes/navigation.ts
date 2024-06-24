@@ -1,7 +1,7 @@
-import { ParametrosRota } from './StackRoutes';
+import { ParametrosRota } from "./StackRoutes";
 
 declare global {
-    namespace ReactNavigation {
-        interface RootParamList extends ParametrosRota {}
-    }
+  namespace ReactNavigation {
+    interface RootParamList extends ParametrosRota {}
+  }
 }

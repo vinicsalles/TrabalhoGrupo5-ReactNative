@@ -10,3 +10,16 @@ export const styled = StyleSheet.create({
     opacity: 0.8,
   },
 });
+
+export const DrawerStyle = StyleSheet.create({
+  container: {
+    backgroundColor: "#003452",
+    color: "#f1f1f1",
+  },
+  header: {
+    backgroundColor: "#003452",
+  },
+  corTextoLateral: {
+    color: "#FF7E04",
+  },
+});
