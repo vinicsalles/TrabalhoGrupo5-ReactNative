@@ -49,7 +49,38 @@ export function Login() {
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <ImageBackground source={Gradiente} style={styled.background}>
         <View style={styled.container}>
+
+          <Image style={styled.logo} source={Logo} />
+
+          <TextInputComponent
+            recebendoFuncao={handleUsername}
+            recebendoValue={username}
+            recebendoPlaceHolder="Email"
+          />
+
+          <TextInputComponent
+            recebendoFuncao={handlePassword}
+            recebendoValue={password}
+            recebendoPlaceHolder="Senha"
+            recebendoTipoDoInput={true}
+          />
+
+<Text style={styled.forgot}>Esqueci a senha!</Text>
+
           <ButtonComponent
+            recebendoCor="grey"
+            recebendoTitle="Login"
+            recebendoIcon={null}
+            recebendoFuncao={handleLogin}
+          />
+        
+        
+
+        <LineComponent
+          recebendoTexto="OU"
+          />
+
+        <ButtonComponent
             recebendoCor="white"
             recebendoIcon={Google}
             recebendoTitle="Continue com Google"
@@ -69,36 +100,8 @@ export function Login() {
             recebendoTitle="Continue com Apple"
             recebendoFuncao={skipLogin}
           />
-
-          <LineComponent
-          recebendoTexto="OU"
-          />
-
-          <Image style={styled.logo} source={Logo} />
-
-          <TextInputComponent
-            recebendoFuncao={handleUsername}
-            recebendoValue={username}
-            recebendoPlaceHolder="email"
-          />
-
-          <TextInputComponent
-            recebendoFuncao={handlePassword}
-            recebendoValue={password}
-            recebendoPlaceHolder="senha"
-            recebendoTipoDoInput={true}
-          />
-
-          <Text style={styled.forgot}>Esqueci a senha!</Text>
-
-          <ButtonComponent
-            recebendoCor="#48C6FD"
-            recebendoTitle="Login"
-            recebendoIcon={null}
-            recebendoFuncao={handleLogin}
-          />
-
-        <Text style={styled.forgot}>Não tem uma conta? Registre-se!</Text>
+          <Text style={styled.signup}>Não tem uma conta? Registre-se!</Text>
+          
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>

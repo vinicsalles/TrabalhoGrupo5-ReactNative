@@ -16,8 +16,8 @@ export const styled = StyleSheet.create({
   },
 
   logo: {
-    width: 200,
-    height: 200,
+    width: 170,
+    height: 170,
     resizeMode: 'contain',
   },
 
@@ -29,12 +29,15 @@ export const styled = StyleSheet.create({
   },
 
   forgot: {
-    alignSelf: 'flex-start',
-    marginLeft: 60,
     fontSize: 15,
-    textAlign: 'center',
+    alignSelf: 'flex-end',
+    marginRight: 50,
     color: 'blue',
-    fontWeight: '400'
+  },
+
+  signup: {
+    fontSize: 15,
+    color: 'blue',
   },
 
   button: {

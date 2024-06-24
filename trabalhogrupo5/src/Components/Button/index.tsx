@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Text, Image } from "react-native";
+import { TouchableOpacity, Text, View, Image } from "react-native";
 import { styled } from "./style";
 
 type PropsButton = {
@@ -21,9 +21,11 @@ export function ButtonComponent({
         style={[styled.button, { backgroundColor: recebendoCor }]}
         onPress={recebendoFuncao}
       >
+        <View style={styled.bContent}>
         <Image style={styled.icon} source={recebendoIcon} alt="icon" />
-
         <Text style={styled.title}>{recebendoTitle}</Text>
+        </View>
+
       </TouchableOpacity>
     </>
   );
