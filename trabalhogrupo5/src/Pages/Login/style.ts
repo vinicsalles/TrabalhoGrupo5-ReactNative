@@ -11,7 +11,14 @@ export const styled = StyleSheet.create({
   background: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#FF7E04',
+    width: '100%',
+    height: '100%',
+  },
+
+  logo: {
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
   },
 
   title: {
@@ -19,6 +26,15 @@ export const styled = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: '900'
+  },
+
+  forgot: {
+    alignSelf: 'flex-start',
+    marginLeft: 60,
+    fontSize: 15,
+    textAlign: 'center',
+    color: 'blue',
+    fontWeight: '400'
   },
 
   button: {

@@ -11,13 +11,14 @@ import {
 import { styled } from "./style";
 import Logo from "../../Assets/logo.png";
 import { TextInputComponent } from "../../Components/TextInput";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 import { ButtonComponent } from "../../Components/Button";
+import Gradiente from "../../Assets/gradiente.png";
 
 export function Login() {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  
+
   const navigation = useNavigation();
 
   const handleUsername = (value: string) => {
@@ -29,27 +30,25 @@ export function Login() {
   };
 
   const handleLogin = () => {
-    if(username=="usuario" && password=="123456") {
-      navigation.navigate("StackTabsPages", { name: "Login" })
+    if (username == "usuario" && password == "123456") {
+      navigation.navigate("StackTabsPages", { name: "Login" });
     } else {
-      Alert.alert("Credenciais invalidas!")
+      Alert.alert("Credenciais invalidas!");
     }
-  }
+  };
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <ImageBackground style={styled.background}>
+      <ImageBackground source={Gradiente} style={styled.background}>
         <View style={styled.container}>
-          <Image
-            style={{
-              width: 280,
-              height: 280,
-              marginTop: 100,
-              marginBottom: -10,
-            }}
-            source={Logo}
-            alt="logo"
+
+        <ButtonComponent
+            recebendoCor="white"
+            recebendoTitle="Login"
+            recebendoFuncao={handleLogin}
           />
+
+          <Image style={styled.logo} source={Logo} />
 
           <TextInputComponent
             recebendoFuncao={handleUsername}
@@ -64,11 +63,13 @@ export function Login() {
             recebendoTipoDoInput={true}
           />
 
-          <ButtonComponent 
-          recebendoCor= '#48C6FD'
-          recebendoTitle="Login"
-          recebendoFuncao={handleLogin} />
+          <Text style={styled.forgot}>Esqueci a senha!</Text>
 
+          <ButtonComponent
+            recebendoCor="#48C6FD"
+            recebendoTitle="Login"
+            recebendoFuncao={handleLogin}
+          />
         </View>
       </ImageBackground>
     </TouchableWithoutFeedback>
