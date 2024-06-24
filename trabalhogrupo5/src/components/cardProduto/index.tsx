@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "./style";
+import { useNavigation } from "@react-navigation/native";
 
 interface Product {
   id: number;
@@ -14,12 +15,14 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const navigation = useNavigation();
+
   const handleBuyPress = () => {
     console.log(`Produto ${product.title} comprado!`);
   };
 
   const handleCartPress = () => {
-    console.log(`Produto ${product.title} adicionado ao carrinho!`);
+    navigation.navigate('StackDetails', { id: product.id });
   };
 
   return (
@@ -38,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           style={[styles.button, styles.cartButton]}
           onPress={handleCartPress}
         >
-          <Text style={styles.buttonText}>Carrinho</Text>
+          <Text style={styles.buttonText}>Mais detalhes</Text>
         </TouchableOpacity>
       </View>
     </View>
