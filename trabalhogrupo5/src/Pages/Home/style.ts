@@ -9,13 +9,34 @@ const styles = StyleSheet.create({
   },
 
   containerViewContador: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    color: 'white',
+    height: 80,
+    width: '100%',
+    backgroundColor: "#003452",
     display: "flex",
-    color: "#f1f",
+  },
+
+  contador: {
+    marginLeft: 40,
+    display: 'flex',
+    flexDirection: 'row',
+  },
+
+  liquidacao: {
+    fontSize:20,
+    marginRight:60,
+    fontWeight: 'bold',
+    textAlignVertical: 'center',
+    marginLeft: 20,
+    color: 'white',
+    display: "flex",
   },
 
   sale: {
-    display: "flex",
     width: '100%',
+    height: 359,
     resizeMode: 'contain',
   },
 
