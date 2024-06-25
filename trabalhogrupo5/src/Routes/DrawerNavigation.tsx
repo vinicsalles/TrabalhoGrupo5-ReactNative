@@ -5,6 +5,7 @@ import { Catalogo } from "../Pages/Catalogo";
 import { Home } from "../Pages/Home";
 import { Profile } from "../Pages/Profile";
 import { DrawerStyle } from "./style";
+import { BottomTabsRoutes } from "./BottomTabsRoutes";
 
 const drawer = createDrawerNavigator();
 
@@ -18,7 +19,12 @@ export default function DrawerNavigation() {
         drawerLabelStyle: DrawerStyle.corTextoLateral,
       }}
     >
-      <drawer.Screen name="Home" component={Home} options={{ title: "Home" }} />
+      <drawer.Screen
+        name="Home"
+        component={BottomTabsRoutes}
+        options={{ title: "Home" }}
+      />
+
       <drawer.Screen
         name="Perfil"
         component={Profile}

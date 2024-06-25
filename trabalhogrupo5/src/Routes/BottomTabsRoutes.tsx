@@ -15,6 +15,7 @@ export function BottomTabsRoutes() {
     <Tab.Navigator
       screenOptions={{
         tabBarLabel: "",
+        headerShown: false,
         tabBarStyle: {
           backgroundColor: "grey",
           height: 70,

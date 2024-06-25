@@ -41,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           style={[styles.button, styles.cartButton]}
           onPress={handleCartPress}
         >
-          <Text style={styles.buttonText}>Carrinho</Text>
+          <Text style={styles.buttonText}>Mais detalhes</Text>
         </TouchableOpacity>
       </View>
     </View>

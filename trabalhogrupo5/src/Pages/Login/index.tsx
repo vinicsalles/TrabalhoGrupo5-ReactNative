@@ -45,7 +45,7 @@ export function Login() {
   const handleLogin = () => {
     if (username == "usuario" && password == "123456") {
       handleAsync();
-      navigation.navigate("StackTabsPages", { name: "Login" });
+      navigation.navigate("Drawer", { name: "Login" });
     } else {
       Alert.alert("Credenciais invalidas!");
     }
