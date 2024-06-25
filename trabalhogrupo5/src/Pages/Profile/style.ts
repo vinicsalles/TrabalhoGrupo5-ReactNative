@@ -21,7 +21,7 @@ export const styled = StyleSheet.create({
   title: {
     color: 'white',    
     textAlign: 'center',
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold',
   },
 
@@ -33,17 +33,36 @@ export const styled = StyleSheet.create({
   },
 
   box: {
-    backgroundColor:'#ffa500',
-    borderRadius: 20,
-    width: '75%',
-    height: '35%',
-    marginTop: '6%'
+    backgroundColor:'#FF7E04',
+    marginTop: '3%'
   },
 
   titleBox: {    
     textAlign: 'center',
-    fontSize: 29,
+    fontSize: 27,
     fontWeight: 'bold',
+    color: 'white'
   },
+
+  textBox: {
+    color: 'white',
+    fontSize: 21,
+    paddingLeft: 18,
+    textAlign:'center',
+    paddingTop:7
+  },
+
+  card: {
+    width:'70%',
+    height:'80%',
+    backgroundColor: '#FF7E04',
+    borderRadius: 25,
+    alignItems:'center'
+  },
+
+  imageCard: {
+    width: 200,
+    height: 200
+  }
 });
 

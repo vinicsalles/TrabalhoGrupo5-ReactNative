@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ImageBackground, Image, ScrollView } from "react-native";
+import { View, Text, Image } from "react-native";
 import { ButtonComponent } from "../../Components/Button";
 import { useNavigation } from "@react-navigation/native";
 import { styled } from "./style";
 import { useAuth } from "../../Hooks/useAuth";
 import axios from "axios";
+import perfil from "../../Assets/profile.png"
 
 export function Profile() {
   const navigation = useNavigation();
@@ -27,35 +28,37 @@ export function Profile() {
 
   return (
     <View style={styled.container}>
-      <ImageBackground style={styled.background}>
-        <Text style={styled.title}>Meu Perfil</Text>
+      <View style={styled.card}>
+          <Image source={perfil} style={styled.imageCard} />
+          <Text style={styled.title}>Perfil</Text>
 
-        <View style={styled.box}>
-          <Text style={styled.titleBox}>Informações do Usuário:</Text>
-          <Text>Username: "{username}"</Text>
-          <Text>Senha: "{password}"</Text>
-        </View>
+          <View style={styled.box}>
+              <Text style={styled.titleBox}>Dados do Usuário:</Text>
+              <Text style={styled.textBox}>Username: "{username}"</Text>
+              <Text style={styled.textBox}>Senha: "{password}"</Text>
+          </View>
 
-        <View style={styled.box}>
-          <Text style={styled.titleBox}>Informações de endereço:</Text>
-            {enderecos.map((endereco) => (
-              <View key={endereco.id}>
-                <Text>Cidade: {endereco.estado}</Text>
-                <Text>CEP: {endereco.cidade}</Text>
-                <Text>Bairro: {endereco.bairro}</Text>
-                <Text>Estado: {endereco.cep}</Text>
-              </View>
-            ))}
-        </View>
+          <View style={styled.box}>
+            <Text style={styled.titleBox}>Endereço:</Text>
+              {enderecos.map((endereco) => (
+                <View key={endereco.id}>
+                  <Text style={styled.textBox}>Estado: {endereco.estado}</Text>
+                  <Text style={styled.textBox}>Cidade: {endereco.cidade}</Text>
+                  <Text style={styled.textBox}>Bairro: {endereco.bairro}</Text>
+                  <Text style={styled.textBox}>CEP: {endereco.cep}</Text>
+                </View>
+              ))}
+          </View>
 
         <View style={styled.button}>
           <ButtonComponent
             recebendoTitle="Sair"
-            recebendoCor={121212}
+            recebendoCor="#00264d"
             recebendoFuncao={handleLogout}
+            corFonte="white"
           />
         </View>
-      </ImageBackground>
+      </View>
     </View>
   );
 }
