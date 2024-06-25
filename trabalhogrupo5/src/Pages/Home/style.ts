@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
     flex: 1,
-    backgroundColor: '#FF7E04', // Defina a cor de fundo desejada
+    backgroundColor: '#003452', // Defina a cor de fundo desejada
   },
     containerbanner: {
     flex: 1,
