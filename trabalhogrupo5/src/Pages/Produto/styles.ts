@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
   },
   backButtonText: {
-    color: "#ffa500",
+    color: "#FF7E04",
     fontSize: 16,
     marginLeft: 5,
   },
@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   button: {
-    backgroundColor: "#ffa500",
+    backgroundColor: "#FF7E04",
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
