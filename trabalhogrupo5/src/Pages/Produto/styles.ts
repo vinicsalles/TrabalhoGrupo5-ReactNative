@@ -64,14 +64,26 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  shippingCost: {
-    fontSize: 18,
-    color: "#fff",
-    marginBottom: 16,
-    textAlign: "center",
+  textAsync: {
+    fontSize: 15,
+    marginBottom: 4,
+    fontWeight: "900",
   },
   loadingText: {
     fontSize: 18,
     color: "#fff",
+  },
+  textCep: {
+    marginBottom: 2,
+  },
+  textCepNegrito: {
+    fontSize: 14,
+    fontWeight: "900",
+  },
+  containerCep: {
+    backgroundColor: "#f1f1f1",
+    padding: 20,
+    width: "80%",
+    borderRadius: 8,
   },
 });
