@@ -9,7 +9,7 @@ interface Product {
   image: string;
   price: number;
 }
-
+//ola bb
 interface ProductCardProps {
   product: Product;
 }
@@ -20,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const handleBuyPress = () => {
     console.log(`Produto ${product.title} comprado!`);
   };
-
+//ola bb
   const handleCartPress = () => {
     navigation.navigate('StackDetails', { id: product.id });
   };
