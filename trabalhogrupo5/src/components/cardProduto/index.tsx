@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const navigation = useNavigation();
 
   const handleBuyPress = () => {
-    console.log(`Produto ${product.title} comprado!`);
+    navigation.navigate("StackDetails", { id: product.id });
   };
 
   const handleCartPress = () => {
