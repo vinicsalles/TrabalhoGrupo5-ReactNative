@@ -18,6 +18,7 @@ import Google from "../../Assets/icons8-google-logo-48.png";
 import Meta from "../../Assets/icons8-meta-48.png";
 import Apple from "../../Assets/icons8-mac-os-30.png";
 import { LineComponent } from "../../Components/line";
+import { AsyncStorage } from "react-native";
 
 export function Login() {
   const [username, setUsername] = useState<string>("");
@@ -33,13 +34,18 @@ export function Login() {
     setPassword(value);
   };
 
+  async function handleAsync() {
+    await AsyncStorage.setItem("@Login", username, password);
+  }
+
   const skipLogin = () => {
-    navigation.navigate("StackTabsPages", { name: "Login" });
+    navigation.navigate("Drawer", { name: "Login" });
   };
 
   const handleLogin = () => {
     if (username == "usuario" && password == "123456") {
-      navigation.navigate("Drawer", { name: "Login" });
+      handleAsync();
+      navigation.navigate("StackTabsPages", { name: "Login" });
     } else {
       Alert.alert("Credenciais invalidas!");
     }
