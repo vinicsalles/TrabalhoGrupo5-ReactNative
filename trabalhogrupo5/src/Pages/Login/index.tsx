@@ -18,7 +18,7 @@ import Google from "../../Assets/icons8-google-logo-48.png";
 import Meta from "../../Assets/icons8-meta-48.png";
 import Apple from "../../Assets/icons8-mac-os-30.png";
 import { LineComponent } from "../../Components/line";
-import { AsyncStorage } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export function Login() {
   const [username, setUsername] = useState<string>("");
@@ -35,7 +35,7 @@ export function Login() {
   };
 
   async function handleAsync() {
-    await AsyncStorage.setItem("@Login", username, password);
+    await AsyncStorage.setItem("@Login", username);
   }
 
   const skipLogin = () => {
