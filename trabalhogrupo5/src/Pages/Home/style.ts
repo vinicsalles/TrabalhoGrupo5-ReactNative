@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
     flex: 1,
-    backgroundColor: '#003452', // Defina a cor de fundo desejada
+    backgroundColor: '#003452',
   },
     containerbanner: {
     flex: 1,
@@ -21,22 +21,24 @@ const styles = StyleSheet.create({
   containerViewContador: {
     display: "flex",
     flex: 1,
-    padding: 60,
+    padding: 100,
     color: "#f1f",
   },
 
   banner: {
     width: '100%',
-    height: 140,  // Ajuste a altura conforme necessário
+    height: 220,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
+    position: 'relative',
   },
+
   bannerText: {
     fontSize: 24,
     fontWeight: 'bold',
     color: 'white',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',  // Fundo semi-transparente para o texto
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     padding: 10,
   },
 
@@ -44,6 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginBottom: 20,
   },
+
   card: {
     backgroundColor: '#fff',
     padding: 20,
@@ -55,9 +58,16 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 5,
   },
+
   cardTitle: {
     fontSize: 18,
   },
+
+  scrollView: {
+    backgroundColor: '#003452',
+    flex: 1
+  },
+
 });
 
 export default styles;

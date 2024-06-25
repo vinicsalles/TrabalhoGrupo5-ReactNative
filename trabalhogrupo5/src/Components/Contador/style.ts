@@ -4,8 +4,11 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   timer: {
+    position: 'absolute',
     fontSize: 29,
     color: "#FF7E04",
-    padding: 53,
+    padding: 90,
+    marginLeft: -137,
+
   },
 });
