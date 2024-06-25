@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#00264d", // Azul escuro
   },
   productCard: {
-    backgroundColor: "#ffa500", // Laranja
+    backgroundColor: "#FF7E04", // Laranja
     borderRadius: 8,
     padding: 16,
     marginVertical: 8,
