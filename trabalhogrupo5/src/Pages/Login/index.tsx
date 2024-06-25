@@ -19,10 +19,12 @@ import Meta from "../../Assets/icons8-meta-48.png";
 import Apple from "../../Assets/icons8-mac-os-30.png";
 import { LineComponent } from "../../Components/line";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useAuth } from "../../Hooks/useAuth";
 
 export function Login() {
-  const [username, setUsername] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+
+  const {username, setUsername} = useAuth();
+  const {password, setPassword} = useAuth();
 
   const navigation = useNavigation();
 
