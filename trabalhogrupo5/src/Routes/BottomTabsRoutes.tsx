@@ -31,7 +31,7 @@ export function BottomTabsRoutes() {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: 10,
+                marginTop: 15,
               }}
             >
               <Icon
@@ -40,7 +40,7 @@ export function BottomTabsRoutes() {
                 color={focused ? "#fff" : "#FF7E04"}
               />
               <Text
-                style={{ fontSize: 25, color: focused ? "#fff" : "#FF7E04" }}
+                style={{ fontSize: 20, color: focused ? "#fff" : "#FF7E04" }}
               >
                 Promoções
               </Text>
@@ -58,7 +58,7 @@ export function BottomTabsRoutes() {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: 10,
+                marginTop: 15,
               }}
             >
               <Icon
@@ -67,7 +67,7 @@ export function BottomTabsRoutes() {
                 color={focused ? "#fff" : "#FF7E04"}
               />
               <Text
-                style={{ fontSize: 25, color: focused ? "#fff" : "#FF7E04" }}
+                style={{ fontSize: 20, color: focused ? "#fff" : "#FF7E04" }}
               >
                 Perfil
               </Text>
@@ -84,7 +84,7 @@ export function BottomTabsRoutes() {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                marginTop: 10,
+                marginTop: 15,
               }}
             >
               <Icon
@@ -93,7 +93,7 @@ export function BottomTabsRoutes() {
                 color={focused ? "#fff" : "#FF7E04"}
               />
               <Text
-                style={{ fontSize: 25, color: focused ? "#fff" : "#FF7E04" }}
+                style={{ fontSize: 20, color: focused ? "#fff" : "#FF7E04" }}
               >
                 Catálogo
               </Text>
