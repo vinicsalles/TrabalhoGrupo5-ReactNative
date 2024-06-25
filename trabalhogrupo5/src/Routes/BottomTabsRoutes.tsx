@@ -17,7 +17,7 @@ export function BottomTabsRoutes() {
         tabBarLabel: "",
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: "grey",
+          backgroundColor: "#003452",
           height: 70,
         },
       }}
@@ -37,12 +37,12 @@ export function BottomTabsRoutes() {
               <Icon
                 name="home"
                 size={20}
-                color={focused ? "#fff" : "#121212"}
+                color={focused ? "#fff" : "#FF7E04"}
               />
               <Text
-                style={{ fontSize: 25, color: focused ? "#fff" : "#121212" }}
+                style={{ fontSize: 25, color: focused ? "#fff" : "#FF7E04" }}
               >
-                Home
+                Promoções
               </Text>
             </View>
           ),
@@ -64,12 +64,12 @@ export function BottomTabsRoutes() {
               <Icon
                 name="person"
                 size={20}
-                color={focused ? "#fff" : "#121212"}
+                color={focused ? "#fff" : "#FF7E04"}
               />
               <Text
-                style={{ fontSize: 25, color: focused ? "#fff" : "#121212" }}
+                style={{ fontSize: 25, color: focused ? "#fff" : "#FF7E04" }}
               >
-                Profile
+                Perfil
               </Text>
             </View>
           ),
@@ -90,12 +90,12 @@ export function BottomTabsRoutes() {
               <Icon
                 name="person"
                 size={20}
-                color={focused ? "#fff" : "#121212"}
+                color={focused ? "#fff" : "#FF7E04"}
               />
               <Text
-                style={{ fontSize: 25, color: focused ? "#fff" : "#121212" }}
+                style={{ fontSize: 25, color: focused ? "#fff" : "#FF7E04" }}
               >
-                Catalogo
+                Catálogo
               </Text>
             </View>
           ),

@@ -6,6 +6,7 @@ import { Home } from "../Pages/Home";
 import { Profile } from "../Pages/Profile";
 import { DrawerStyle } from "./style";
 import { BottomTabsRoutes } from "./BottomTabsRoutes";
+import { Login } from "../Pages/Login";
 
 const drawer = createDrawerNavigator();
 
@@ -22,7 +23,7 @@ export default function DrawerNavigation() {
       <drawer.Screen
         name="Home"
         component={BottomTabsRoutes}
-        options={{ title: "Home" }}
+        options={{ title: "Promoções" }}
       />
 
       <drawer.Screen
