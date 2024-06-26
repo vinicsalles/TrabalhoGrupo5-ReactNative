@@ -22,9 +22,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuth } from "../../Hooks/useAuth";
 
 export function Login() {
-
-  const {username, setUsername} = useAuth();
-  const {password, setPassword} = useAuth();
+  const { username, setUsername } = useAuth();
+  const { password, setPassword } = useAuth();
 
   const navigation = useNavigation();
 
@@ -45,7 +44,7 @@ export function Login() {
   };
 
   const handleLogin = () => {
-    if (username == "usuario" && password == "123456") {
+    if (username == "Felipe" && password == "123456") {
       handleAsync();
       navigation.navigate("Drawer", { name: "Login" });
     } else {

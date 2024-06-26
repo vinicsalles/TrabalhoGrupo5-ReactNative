@@ -67,12 +67,8 @@ const DetalheProdutoScreen: React.FC = () => {
   };
 
   const handleCompra = () => {
-    Alert.alert(
-      "Compra realizada",
-      `Você comprou o produto: ${produto?.title}`
-    );
+    navigation.navigate("StackPagamento", { name: "Pagamentos" });
   };
-
   if (!produto) {
     return (
       <View style={styles.container}>
