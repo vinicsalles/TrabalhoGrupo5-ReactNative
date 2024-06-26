@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
       <View style={styles.container}>
         <View style={styles.containerbanner}>
           <ImageBackground
-            source={require('../../Assets/banneroficial.jpg')}
+            source={require('../../Assets/banneroficialdois.jpg')}
             style={styles.banner}>
             <View style={styles.containerViewContador}>
               <Contador />

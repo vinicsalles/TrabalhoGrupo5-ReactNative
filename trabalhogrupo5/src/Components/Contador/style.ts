@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     fontSize: 29,
     color: "#FF7E04",
-    padding: 90,
-    marginLeft: -137,
+    padding: 137,
+    marginLeft: -180,
 
   },
 });
