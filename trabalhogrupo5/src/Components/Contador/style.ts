@@ -5,9 +5,9 @@ export const styles = StyleSheet.create({
   },
   timer: {
     position: 'absolute',
-    fontSize: 29,
+    fontSize: 26,
     color: "#FF7E04",
-    padding: 137,
+    padding: 125,
     marginLeft: -180,
 
   },

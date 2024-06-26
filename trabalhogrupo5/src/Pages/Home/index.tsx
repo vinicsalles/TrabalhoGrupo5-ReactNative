@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
       <View style={styles.container}>
         <View style={styles.containerbanner}>
           <ImageBackground
-            source={require('../../Assets/banneroficialdois.jpg')}
+            source={require('../../Assets/banneroficial.jpg')}
             style={styles.banner}>
             <View style={styles.containerViewContador}>
               <Contador />
@@ -88,10 +88,15 @@ export const Home: React.FC = () => {
                   <ProductCard product={product} />
                 </View>
               ))}
+            
             </View>
           </ScrollView>
         </View>
       </View>
+            <ImageBackground
+              source={require('../../Assets/bannerfrete.jpg')}
+              style={styles.Bannerfrete}>
+            </ImageBackground>
     </ScrollView>
   );
 };

@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
     flex: 1,
-    backgroundColor: '#1B3651',
+    width: '100%',
+    backgroundColor: '#00264d',
   },
     containerbanner: {
     flex: 1,
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
 
   banner: {
     width: '100%',
-    height: 280,
+    height: 265,
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
@@ -64,8 +65,13 @@ const styles = StyleSheet.create({
   },
 
   scrollView: {
-    backgroundColor: '#1B3651',
+    backgroundColor: '#00264d',
     flex: 1
+  },
+
+  Bannerfrete: {
+    width: '100%',
+    height: 200,
   },
 
 });
