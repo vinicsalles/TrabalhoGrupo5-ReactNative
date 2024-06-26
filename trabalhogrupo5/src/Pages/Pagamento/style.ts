@@ -3,14 +3,14 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     backgroundColor: "#003452",
     padding: 20,
   },
   textContainer: {
+    marginTop: 0,
     fontSize: 19,
     textAlign: "center",
-    marginBottom: 17,
+    marginBottom: 12,
     color: "#f1f1f1",
   },
   textContainerCartao: {
@@ -22,6 +22,15 @@ export const styles = StyleSheet.create({
   opcaoContainer: {
     alignItems: "center",
     marginBottom: 20,
+  },
+
+  opcaoContainerCardCartao: {
+    alignItems: "center",
+    marginBottom: 2,
+  },
+  pixContainer: {
+    flexDirection: "row",
+    gap: 8,
   },
   opcaoContainerCartao: {
     flexDirection: "row",
@@ -35,7 +44,7 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     width: "80%",
-    marginBottom: 10,
+    marginBottom: 1,
   },
   botao: {
     backgroundColor: "#FF7E04",
@@ -45,6 +54,28 @@ export const styles = StyleSheet.create({
     width: "100%",
     marginBottom: 20,
   },
+  botaoBoleto: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 11,
+    backgroundColor: "#FF7E04",
+    padding: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    width: "100%",
+    marginBottom: 13,
+  },
+  botaoComprar: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 3,
+    backgroundColor: "#FF7E04",
+    padding: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    width: "100%",
+    marginBottom: 13,
+  },
   botaoText: {
     color: "#f1f1f1",
     fontSize: 16,
@@ -53,7 +84,7 @@ export const styles = StyleSheet.create({
   codigoBoletoContainer: {
     color: "#f1f1f1",
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 10,
   },
   codigoBoletoContainerText: {
     color: "#f1f1f1",

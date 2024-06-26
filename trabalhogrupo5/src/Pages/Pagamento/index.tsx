@@ -44,22 +44,31 @@ export const Pagamentos = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        Bem {usuario}, vamos ao que interessa!!
-      </Text>
+      <Text style={styles.textContainer}>Bem {usuario}</Text>
       <Text style={styles.textContainer}>Escolha uma das opções abaixo:</Text>
 
       <View style={styles.opcaoContainer}>
-        <Text style={styles.textContainer}>Pix</Text>
+        <View style={styles.pixContainer}>
+          <Image source={require("../../Assets/pix.png")}></Image>
+          <Text style={styles.textContainer}>Pix</Text>
+        </View>
         <Image
           source={require("../../Assets/qrcode.png")}
           style={{ width: 120, height: 120 }}
         />
       </View>
 
-      <Text style={styles.textContainerCartao}>Cartão</Text>
+      <View style={styles.opcaoContainerCardCartao}>
+        <View style={styles.pixContainer}>
+          <Image source={require("../../Assets/Wallet.png")}></Image>
+          <Text style={styles.textContainerCartao}>Cartões</Text>
+        </View>
+      </View>
       <View style={styles.opcaoContainerCartao}>
-        <Image source={require("../../Assets/mastercard.png")} />
+        <Image
+          source={require("../../Assets/mastercard.png")}
+          style={{ width: 50, height: 30 }}
+        />
         <TextInput
           placeholder="Número do Cartão"
           placeholderTextColor="#f1f1f1"
@@ -68,8 +77,51 @@ export const Pagamentos = () => {
           style={styles.input}
         />
       </View>
+      <View style={styles.opcaoContainerCartao}>
+        <Image
+          source={require("../../Assets/mercadopago.png")}
+          style={{ width: 50, height: 30 }}
+        />
+        <TextInput
+          placeholder="Número do Cartão"
+          placeholderTextColor="#f1f1f1"
+          value={numeroCartao}
+          onChangeText={(text) => setNumeroCartao(text)}
+          style={styles.input}
+        />
+      </View>
+      <View style={styles.opcaoContainerCartao}>
+        <Image
+          source={require("../../Assets/elo.png")}
+          style={{ width: 50, height: 50 }}
+        />
+        <TextInput
+          placeholder="Número do Cartão"
+          placeholderTextColor="#f1f1f1"
+          value={numeroCartao}
+          onChangeText={(text) => setNumeroCartao(text)}
+          style={styles.input}
+        />
+      </View>
+      <View style={styles.opcaoContainerCartao}>
+        <Image
+          source={require("../../Assets/bitcoin.png")}
+          style={{ width: 50, height: 50 }}
+        />
+        <TextInput
+          placeholder="Ex: 0,0000029 BTC (~R$10,00)"
+          placeholderTextColor="#f1f1f1"
+          value={numeroCartao}
+          onChangeText={(text) => setNumeroCartao(text)}
+          style={styles.input}
+        />
+      </View>
 
-      <TouchableOpacity onPress={handlePressGerarBoleto} style={styles.botao}>
+      <TouchableOpacity
+        onPress={handlePressGerarBoleto}
+        style={styles.botaoBoleto}
+      >
+        <Image source={require("../../Assets/boleto.png")}></Image>
         <Text style={styles.botaoText}>Gerar Boleto</Text>
       </TouchableOpacity>
       {codigoBoleto && (
@@ -80,10 +132,17 @@ export const Pagamentos = () => {
           <Text style={styles.codigoBoletoContainer}>{codigoBoleto}</Text>
         </View>
       )}
-      <TouchableOpacity style={styles.botao}>
+      <TouchableOpacity style={styles.botaoComprar}>
+        <Image source={require("../../Assets/dinheiro.png")}></Image>
         <Text style={styles.botaoText} onPress={handleComprar}>
           Comprar
         </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.botaoComprar}
+        onPress={() => navigation.goBack()}
+      >
+        <Text style={styles.botaoText}>Voltar</Text>
       </TouchableOpacity>
     </View>
   );
