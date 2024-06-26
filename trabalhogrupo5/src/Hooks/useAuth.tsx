@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
 
-const creatorContext = createContext({});
-
 export type PropsContexto = {
     username: string;
     setUsername: (value: string) => void;
