@@ -34,7 +34,11 @@ export const styled = StyleSheet.create({
 
   box: {
     backgroundColor:'#FF7E04',
-    marginTop: '3%'
+    marginTop: '3%',
+    borderWidth: 2,
+    borderRadius: 20,
+    borderColor: '#00264d',
+    width: '65%',
   },
 
   titleBox: {    
@@ -49,7 +53,8 @@ export const styled = StyleSheet.create({
     fontSize: 21,
     paddingLeft: 18,
     textAlign:'center',
-    paddingTop:7
+    paddingTop:7,
+    paddingBottom: 7
   },
 
   card: {
@@ -63,6 +68,12 @@ export const styled = StyleSheet.create({
   imageCard: {
     width: 200,
     height: 200
+  },
+
+  boxPerfil: {
+    width: '65%',
+    backgroundColor: '#00264d',
+    borderRadius: 28
   }
 });
 
