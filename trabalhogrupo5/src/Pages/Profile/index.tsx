@@ -30,7 +30,11 @@ export function Profile() {
     <View style={styled.container}>
       <View style={styled.card}>
           <Image source={perfil} style={styled.imageCard} />
+          
+          <View style={styled.boxPerfil} >
           <Text style={styled.title}>Perfil</Text>
+          </View>
+          
 
           <View style={styled.box}>
               <Text style={styled.titleBox}>Dados do Usuário:</Text>
