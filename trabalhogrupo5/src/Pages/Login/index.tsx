@@ -17,7 +17,7 @@ import Gradiente from "../../Assets/gradiente.png";
 import Google from "../../Assets/icons8-google-logo-48.png";
 import Meta from "../../Assets/icons8-meta-48.png";
 import Apple from "../../Assets/icons8-mac-os-30.png";
-import { LineComponent } from "../../Components/line";
+import { LineComponent } from "../../Components/LineLogin/line";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuth } from "../../Hooks/useAuth";
 
